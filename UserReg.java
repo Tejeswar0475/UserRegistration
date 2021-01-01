@@ -64,7 +64,7 @@ public class UserReg {
 		
 		Pattern mobileFormatRegExp=Pattern.compile("(^[a-z]{3,}.)|([a-z]{3,})@([a-z]{2,}.[a-z]{2})|(.[a-z]{2})");
 		Matcher matchResultMobileFormat=mobileFormatRegExp.matcher(userInputMobileFormat);
-		boolean mobileFormatResult=matchResultEmailId.matches();
+		boolean mobileFormatResult=matchResultMobileFormat.matches();
 		if(mobileFormatResult == true)
 		{
 			System.out.println(mobileFormatResult);
@@ -108,7 +108,23 @@ public class UserReg {
 			System.out.println(oneUpperCasePasswordResult);
 		}
 		
+		System.out.println("Enter Password one Numeric Case Number:");
+		Scanner scanner6=new Scanner(System.in);
+		String userInputPasswordOneNumericCase=scanner6.next();
 		
+		Pattern passwordOneNumericCaseRegExp=Pattern.compile("(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}");
+		Matcher matchResultPasswordOneNumericCase=passwordOneNumericCaseRegExp.matcher(userInputPasswordOneNumericCase);
+		boolean oneNumericCasePasswordResult=matchResultPasswordOneNumericCase.matches();
+		if(oneNumericCasePasswordResult == true)
+		{
+			System.out.println(oneNumericCasePasswordResult);
+		}
+		else
+		{
+			System.out.println(oneNumericCasePasswordResult);
+		}
+		
+	
 	}
 
 }
