@@ -124,7 +124,21 @@ public class UserReg {
 			System.out.println(oneNumericCasePasswordResult);
 		}
 		
-	
+		System.out.println("Enter Password one Special charecter:");
+		Scanner scanner7=new Scanner(System.in);
+		String userInputPasswordOneSpecialCase=scanner7.next();		
+		Pattern passwordOneSpecialCaseRegExp=Pattern.compile("(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!_%*#?&]{1})[a-zA-Z0-9@$!_%*#?&]{8,}");
+		Matcher matchResultPasswordOneSspecialCase=passwordOneSpecialCaseRegExp.matcher(userInputPasswordOneSpecialCase);
+		boolean oneSpecialCasePasswordResult=matchResultPasswordOneSspecialCase.matches();
+		if(oneSpecialCasePasswordResult == true)
+		{
+			System.out.println(oneSpecialCasePasswordResult);
+		}
+		else
+		{
+			System.out.println(oneSpecialCasePasswordResult);
+		}
+		
 	}
 
 }
