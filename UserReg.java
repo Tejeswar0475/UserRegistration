@@ -27,7 +27,6 @@ public class UserReg {
 		}
 
 		System.out.println("Enter Last Name:");
-
 		Scanner scanner1=new Scanner(System.in);
 		String userInputLastName=scanner1.next();
 
@@ -43,6 +42,25 @@ public class UserReg {
 			System.out.println(lastNameResult);
 		}
 
+		
+		System.out.println("Enter EmailId");
+		Scanner scanner2=new Scanner(System.in);
+		String userInputEmailId=scanner2.next();
+		
+		Pattern emailIdRegExp=Pattern.compile("(^[a-z]{3,}.)|([a-z]{3,})@([a-z]{2,}.[a-z]{2})|(.[a-z]{2})");
+		Matcher matchResultEmailId=emailIdRegExp.matcher(userInputEmailId);
+		boolean emailIdResult=matchResultEmailId.matches();
+		if(emailIdResult == true)
+		{
+			System.out.println(emailIdResult);
+		}
+		else
+		{
+			System.out.println(emailIdResult);
+		}
+	
+		
+	
 	}
 
 }
