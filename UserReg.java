@@ -10,7 +10,6 @@ public class UserReg {
 		System.out.println("Welcome to user registration");
 
 		System.out.println("Enter First Name:");
-
 		Scanner scanner=new Scanner(System.in);
 		String userInput=scanner.next();
 
@@ -74,8 +73,25 @@ public class UserReg {
 		{
 			System.out.println(mobileFormatResult);
 		}
+		
+		
+		System.out.println("Enter Password");
+		Scanner scanner4=new Scanner(System.in);
+		String userInputPassword=scanner4.next();
+		
+		Pattern passwordRegExp=Pattern.compile("[A-Za-z0-9]{8,}");
+		Matcher matchResultPassword=passwordRegExp.matcher(userInputPassword);
+		boolean minCharPasswordResult=matchResultPassword.matches();
+		if(minCharPasswordResult == true)
+		{
+			System.out.println(minCharPasswordResult);
+		}
+		else
+		{
+			System.out.println(minCharPasswordResult);
+		}
 	
-	
+		
 	}
 
 }
