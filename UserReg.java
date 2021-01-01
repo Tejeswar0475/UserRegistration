@@ -92,6 +92,23 @@ public class UserReg {
 		}
 	
 		
+		System.out.println("Enter Password one upper case:");
+		Scanner scanner5=new Scanner(System.in);
+		String userInputPasswordOneUpperCase=scanner5.next();
+		
+		Pattern passwordOneUpperCaseRegExp=Pattern.compile("(?=.*[A-Z])[a-zA-Z0-9]{8,}");
+		Matcher matchResultPasswordOneUpperCase=passwordOneUpperCaseRegExp.matcher(userInputPasswordOneUpperCase);
+		boolean oneUpperCasePasswordResult=matchResultPasswordOneUpperCase.matches();
+		if(oneUpperCasePasswordResult == true)
+		{
+			System.out.println(oneUpperCasePasswordResult);
+		}
+		else
+		{
+			System.out.println(oneUpperCasePasswordResult);
+		}
+		
+		
 	}
 
 }
